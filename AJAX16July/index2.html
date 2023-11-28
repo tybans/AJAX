@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>AJAX</p>
+    <ul>
+        <!-- <li></li>
+        <li></li>
+        <li></li> -->
+    </ul>
+    <button id="btn">Fetch Data</button>
+
+    <script>
+        var xhr = new XMLHttpRequest
+        xhr.open("GET", "https://reqres.in/api/users?page=2")
+        xhr.send()
+        xhr.onload = function onClick() {
+            result = xhr.responseText
+            result = JSON.parse(result)
+            list = result.data
+            console.log(list);
+
+            let button = document.getElementById("btn")
+            button.addEventListener("click", () => {
+                const mainUl = document.querySelector("ul")
+                console.log(list, mainUl);
+
+                for (let i = 0; i < result.data.length; i++) {
+                    // const Id = document.createElement("li");
+                    // Id.innerHTML= list[i].id;
+                    // mainUl.appendChild(Id)
+                    // const Email = document.createElement("li")
+                    // Email.innerHTML = list[i].email;
+                    // mainUl.appendChild(Email)
+                    // const Name = document.createElement("li")
+                    // Name.innerHTML = list[i].first_name
+                    // mainUl.appendChild(Name)
+                    mainUl.innerHTML = mainUl.innerHTML+ `<li>${list[i].email}</li>`
+                    mainUl.innerHTML = mainUl.innerHTML+`<li>${list[i].firs_name}</li>`
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
