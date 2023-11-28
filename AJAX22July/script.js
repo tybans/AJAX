@@ -12,6 +12,10 @@
 
 // the selector should be global
 let mainBody = document.querySelector(".main")
+let inputBox = document.querySelector("input")
+inputBox.addEventListener("change", (event)=>{
+    console.log(event);
+})
 // handling the promise of fetch using async-await keyword
 async function fetchData() {
     // async- await are used to handle promise
@@ -41,7 +45,7 @@ async function fetchData() {
         <div class="image" style="height: 70%;">Image here ${ele.thumbnail}</div>
      </div>`
     })
-    console.log(mainBodyInnerHtml, "main body inner html");
+    // console.log(mainBodyInnerHtml, "main body inner html");
 }
 
 
