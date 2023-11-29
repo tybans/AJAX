@@ -1,0 +1,55 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: crimson; */
+}
+
+*{
+    /* Border box enalbles you to give padding to box structure whithout changing the default height and width of the box  */
+    box-sizing: border-box;
+}
+
+.header{
+    height: 10%;
+    background-color: aqua;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; */
+}
+
+.main{
+    /* height: 90%; */
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.main .card{
+    margin: 20px;
+    height: 30%;
+    width: 30%;
+    /* background-color: red; */
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.image{
+    height: 180px;
+    width: 100%;
+    border-radius: 10px;
+    /* background-color: cyan; */
+}
+
+img img{
+    height: 100%;
+    width: 100%;
+}
+
+.main .card .custom-body{
+    height: 40%;
+    width: 100%;
+}
